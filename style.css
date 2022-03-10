@@ -22,15 +22,20 @@ img {
 :root {
   --headerHeight: 4.5rem;
 
-  --baseColor: #5f328b;
+  --baseColor: #721fc5;
   --baseColorSecondary: #e5c727;
   --baseColorAlt: #9361cc;
-  --titleColor: #5f328b;
+  --titleColor: #721fc5;
   --textColor: hsl(0 0% 46%);
   --textColorLight: hsl(0 0% 98%);
   --bodyColor: hsl(0 0% 98%);
   --whatsappColor: #34af23;
   --whatsappColorAlt: #4bb63cec;
+
+  /* fonts */
+  --subtitle-font-size: 1rem;
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
 }
 
 /*============== BASE ===================*/
@@ -39,14 +44,14 @@ html {
 }
 
 body {
-  font: 400 1rem 'DM Sans', sans-serif;
+  font: 400 1rem var(--body-font);
   color: var(--textColor);
   background: var(--bodyColor);
   -webkit-font-smoothing: antialiased;
 }
 
 .title {
-  font: 700 1.875rem 'Poppins', sans-serif;
+  font: 700 1.875rem var(--title-font);
   color: var(--titleColor);
   -webkit-font-smoothing: auto;
 }
@@ -59,7 +64,7 @@ body {
   align-items: center;
   padding: 0 2rem;
   border-radius: 0.25rem;
-  font: 500 1rem 'DM Sans', sans-serif;
+  font: 500 1rem var(--body-font);
   transition: background 0.2s;
 }
 
@@ -89,11 +94,15 @@ body {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: calc(5rem + var(--headerHeight)) 0;
 }
 
 .section .title {
   margin-bottom: 1rem;
+}
+
+.section .subtitle {
+  font-size: var(--subtitle-font-size);
 }
 
 .section header {
@@ -109,20 +118,17 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: var(--bodyColor);
+  background-color: black;
 }
 
 #header .scroll {
   box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.15);
 }
 
-main {
-  margin-top: calc(var(--headerHeight) + 2rem);
-}
 
 /*============== LOGO ===================*/
 .logo {
-  font: 700 1.31rem 'Poppins', sans-serif;
+  font: 700 1.31rem var(--title-font);
   color: var(--titleColor);
 }
 
@@ -182,7 +188,7 @@ nav .menu ul {
 nav.show .menu {
   opacity: 1;
   visibility: visible;
-  background: var(--bodyColor);
+  background: black;
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -202,9 +208,13 @@ nav.show ul.grid {
 
 /* toggle menu */
 .toggle {
-  color: var(--baseColorAlt);
+  color: var(--baseColorSecondary);
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+nav .menu ul li a.title {
+  color: var(--baseColorSecondary);
 }
 
 nav .icon-clear {
@@ -430,3 +440,111 @@ nav.show div.icon-clear {
 #contact ul li i {
   color: var(--baseColorAlt);
 }
+
+/*============== FOOTER ===================*/
+footer {
+  background: black;
+}
+
+footer.section {
+  padding: 4rem 0;
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+footer .brand p {
+  color: var(--textColorLight);
+  margin-bottom: 0.75rem;
+}
+
+footer i {
+  font-size: 1.5rem;
+  color: var(--textColorLight);
+}
+
+footer .social {
+  grid-auto-flow: column;
+  width: fit-content;
+}
+
+footer .social a {
+  color: var(--textColorLight);
+  transition: 0.3s;
+  display: inline-block;
+}
+
+footer .social a:hover {
+  transform: translateY(-8px);
+}
+
+/* ============== RESPONSIVE ===================*/
+/* ============== MEDIA QUERIES ===================*/
+/* extra large devices: 1200 > */
+@media (min-width: 1200px) {
+  .container{
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section {
+    padding: 10rem 0;
+  }
+
+  .toggle {
+    color: var(--baseColorSecondary);
+  }
+
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+    color: var(--baseColorSecondary);
+  }
+
+  nav .icon-menu {
+    display: none;
+  }
+
+  /* home */
+
+  #home .container {
+    grid-auto-flow: column;
+  }
+
+  #home .image {
+    order: 1;
+  }
+
+  #home .text {
+    order: 0;
+  }
+
+  main {
+    margin-top: var(--headerHeight);
+  }
+  
+}
+/* large devices: 1023 > */
+/* large devices: 992 > */
+@media (min-width: 992) {
+  .title{
+    font-size: 2.25rem;
+  }
+  :root {
+    --subtitle-font-size: 1.125rem;
+  }
+}
+
+/* medium devices: 767 > */

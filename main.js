@@ -37,7 +37,6 @@ const swiper = new Swiper('.swiper-container', {
   pagination: {
     el: '.swiper-pagination'
   },
-  mousewheel: true,
   keyboard: true
 })
 
@@ -54,7 +53,8 @@ scrollReveal.reveal(
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials,
-  #contact .text, #contact .links`,
+  #contact .text, #contact .links,
+  footer .brand, footer .social`,
   { interval: 225 }
 )
 
