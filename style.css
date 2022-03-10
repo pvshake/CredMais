@@ -34,8 +34,8 @@ img {
 
   /* fonts */
   --subtitle-font-size: 1rem;
-  --title-font: 'Poppins', sans-serif;
-  --body-font: 'DM Sans', sans-serif;
+  --title-font: "Poppins", sans-serif;
+  --body-font: "DM Sans", sans-serif;
 }
 
 /*============== BASE ===================*/
@@ -125,7 +125,6 @@ body {
   box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.15);
 }
 
-
 /*============== LOGO ===================*/
 .logo {
   font: 700 1.31rem var(--title-font);
@@ -159,7 +158,7 @@ nav ul li a:hover {
 }
 
 nav ul li a::after {
-  content: '';
+  content: "";
   width: 0%;
   height: 2px;
   background: var(--baseColorSecondary);
@@ -246,7 +245,7 @@ nav.show div.icon-clear {
 }
 
 #home .image::before {
-  content: '';
+  content: "";
   height: 100%;
   width: 100%;
   background: var(--baseColorSecondary);
@@ -295,7 +294,7 @@ nav.show div.icon-clear {
 }
 
 #about .image::before {
-  content: '';
+  content: "";
   height: 100%;
   width: 100%;
   background: var(--baseColorSecondary);
@@ -484,7 +483,7 @@ footer .social a:hover {
 /* ============== MEDIA QUERIES ===================*/
 /* extra large devices: 1200 > */
 @media (min-width: 1200px) {
-  .container{
+  .container {
     max-width: 1120px;
     margin-left: auto;
     margin-right: auto;
@@ -521,6 +520,8 @@ footer .social a:hover {
 
   #home .container {
     grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
   }
 
   #home .image {
@@ -529,18 +530,18 @@ footer .social a:hover {
 
   #home .text {
     order: 0;
+    max-width: 24rem;
+    text-align: left;
   }
 
   main {
     margin-top: var(--headerHeight);
   }
-  
-  
 }
 /* large devices: 1023 > */
 /* large devices: 992 > */
 @media (min-width: 992) {
-  .title{
+  .title {
     font-size: 2.25rem;
   }
   :root {
