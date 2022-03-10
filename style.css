@@ -153,7 +153,8 @@ nav ul li a {
   position: relative;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, 
+nav ul li a.active{
   color: var(--baseColorSecondary);
 }
 
@@ -168,7 +169,8 @@ nav ul li a::after {
   transition: width 0.3s;
 }
 
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul li a.active::after {
   width: 100%;
 }
 
@@ -521,6 +523,12 @@ footer .social a:hover {
   nav .menu ul li a.title {
     font: 400 1rem var(--body-font);
     color: var(--baseColorSecondary);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav .menu ul li a.active {
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
   }
 
   nav .icon-menu {
@@ -587,7 +595,7 @@ footer .social a:hover {
     padding: 3.75rem 0;
   }
 
-  footer.container {
+  footer .container {
     grid-auto-flow: column;
     align-items: center;
     justify-content: space-between;
