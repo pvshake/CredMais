@@ -22,13 +22,13 @@ img {
 :root {
   --headerHeight: 4.5rem;
 
-  --baseColor: #721fc5;
-  --baseColorSecondary: #e5c727;
+  --baseColor: #721fc5; 
+  --baseColorSecondary: #721fc5; 
   --baseColorAlt: #9361cc;
-  --titleColor: #721fc5;
-  --textColor: hsl(0 0% 46%);
+  --titleColor: #e5c727;
+  --textColor: rgb(214, 214, 214);
   --textColorLight: hsl(0 0% 98%);
-  --bodyColor: hsl(0 0% 98%);
+  --bodyColor: rgb(20, 20, 20);
   --whatsappColor: #34af23;
   --whatsappColorAlt: #4bb63cec;
 
@@ -63,7 +63,7 @@ body {
   display: inline-flex;
   align-items: center;
   padding: 0 2rem;
-  border-radius: 1rem;
+  border-radius: 1.25rem;
   font: 500 1rem var(--body-font);
   transition: background 0.2s;
 }
@@ -122,17 +122,17 @@ body {
 }
 
 #header .scroll {
-  box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 8px 8px 12px rgba(255, 255, 255, 0.301);
 }
 
 /*============== LOGO ===================*/
 .logo {
   font: 700 1.31rem var(--title-font);
-  color: var(--titleColor);
+  color: var(--baseColor);
 }
 
 .logo div {
-  color: var(--baseColorSecondary);
+  color: var(--titleColor);
 }
 
 /*============== NAVIGATION ===================*/
@@ -162,7 +162,7 @@ nav ul li a::after {
   content: "";
   width: 0%;
   height: 2px;
-  background: var(--baseColorSecondary);
+  background: var(--titleColor);
   position: absolute;
   left: 0;
   bottom: -1.5rem;
@@ -209,13 +209,13 @@ nav.show ul.grid {
 
 /* toggle menu */
 .toggle {
-  color: var(--baseColorSecondary);
+  color: var(--titleColor);
   font-size: 1.5rem;
   cursor: pointer;
 }
 
 nav .menu ul li a.title {
-  color: var(--baseColorSecondary);
+  color: var(--titleColor);
 }
 
 nav .icon-clear {
@@ -264,7 +264,7 @@ nav.show div.icon-clear {
 
 #home .image img,
 #home .image::before {
-  border-radius: 1rem;
+  border-radius: 1.25rem;
 }
 
 #home .text {
@@ -284,7 +284,7 @@ nav.show div.icon-clear {
 
 /*============== ABOUT ===================*/
 #about {
-  background: white;
+  background: var(--bodyColor);
 }
 
 #about .container {
@@ -312,7 +312,7 @@ nav.show div.icon-clear {
 
 #about .image img,
 #about .image::before {
-  border-radius: 1rem;
+  border-radius: 1.25rem;
 }
 
 #about .text {
@@ -327,9 +327,9 @@ nav.show div.icon-clear {
 
 .card {
   padding: 3.625rem 2rem;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.301);
   border-bottom: 0.25rem solid var(--baseColor);
-  border-radius: 0.1rem 0.1rem 0 0;
+  border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
   text-align: center;
 }
 
@@ -337,7 +337,7 @@ nav.show div.icon-clear {
   display: block;
   margin-bottom: 1.5rem;
   font-size: 5rem;
-  color: var(--baseColor);
+  color: var(--titleColor);
 }
 
 .card .title {
@@ -347,7 +347,7 @@ nav.show div.icon-clear {
 
 /*============== TESTIMONIALS ===================*/
 #testimonials {
-  background: white;
+  background: var(--bodyColor);
 }
 
 #testimonials .container {
@@ -363,7 +363,7 @@ nav.show div.icon-clear {
 
 #testimonials blockquote {
   padding: 2rem;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.301);
   border-radius: 1rem;
 }
 
@@ -379,7 +379,7 @@ nav.show div.icon-clear {
   position: absolute;
   top: -0.375rem;
   left: -1.875rem;
-  color: var(--baseColorAlt);
+  color: var(--titleColor);
 }
 
 #testimonials cite {
@@ -403,7 +403,7 @@ nav.show div.icon-clear {
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--baseColorSecondary);
+  background: var(--titleColor);
 }
 
 /*============== CONTACT ===================*/
@@ -522,7 +522,7 @@ footer .social a:hover {
 
   nav .menu ul li a.title {
     font: 400 1rem var(--body-font);
-    color: var(--baseColorSecondary);
+    color: var(--titleColor);
     -webkit-font-smoothing: antialiased;
   }
 
