@@ -63,7 +63,7 @@ body {
   display: inline-flex;
   align-items: center;
   padding: 0 2rem;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   font: 500 1rem var(--body-font);
   transition: background 0.2s;
 }
@@ -262,7 +262,7 @@ nav.show div.icon-clear {
 
 #home .image img,
 #home .image::before {
-  border-radius: 0.25rem;
+  border-radius: 1rem;
 }
 
 #home .text {
@@ -310,7 +310,7 @@ nav.show div.icon-clear {
 
 #about .image img,
 #about .image::before {
-  border-radius: 0.25rem;
+  border-radius: 1rem;
 }
 
 #about .text {
@@ -327,7 +327,7 @@ nav.show div.icon-clear {
   padding: 3.625rem 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-bottom: 0.25rem solid var(--baseColor);
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: 0.1rem 0.1rem 0 0;
   text-align: center;
 }
 
@@ -362,7 +362,7 @@ nav.show div.icon-clear {
 #testimonials blockquote {
   padding: 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
-  border-radius: 0.25rem;
+  border-radius: 1rem;
 }
 
 #testimonials blockquote p {
@@ -491,6 +491,17 @@ footer .social a:hover {
   .section {
     padding: 10rem 0;
   }
+  .section header,
+  #testimonials header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button {
+    height: 3.125rem;
+  }
 
   .toggle {
     color: var(--baseColorSecondary);
@@ -518,10 +529,14 @@ footer .social a:hover {
 
   /* home */
 
+  main {
+    margin-top: var(--headerHeight);
+  }
+
   #home .container {
     grid-auto-flow: column;
-    justify-content: space-between;
     margin: 0 auto;
+    justify-content: space-between;
   }
 
   #home .image {
@@ -534,9 +549,50 @@ footer .social a:hover {
     text-align: left;
   }
 
-  main {
-    margin-top: var(--headerHeight);
+  /* about */
+  #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
   }
+
+  /* services */
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+
+  /* testimonials */
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* contact */
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact .text {
+    max-width: 25rem;
+  }
+
+  /* footer */
+  footer.section {
+    padding: 3.75rem 0;
+  }
+
+  footer.container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
 }
 /* large devices: 1023 > */
 /* large devices: 992 > */
